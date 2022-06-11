@@ -1,0 +1,13 @@
+# run: conda env create --file environment.yml
+name: jupyter-codeserver-proxy
+channels:
+  - conda-forge
+dependencies:
+  - jupyterlab=3
+  - jupyterlab_server
+  - jupyter-server-proxy>=3.1.0
+  - jupyter_conda
+  - pip
+  - pip:
+#      - code-server
+      - -r file:requirements.txt

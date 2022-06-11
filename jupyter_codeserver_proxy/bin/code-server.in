@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# you might need to modify your environment
+# before you can start 'xpra'
+# Do it here.
+
+# example:
+# module purge
+# module load Stages/2022
+# module load code-server/4.4.0
+
+code-server "$@"
