@@ -60,8 +60,7 @@ def setup_codeserver():
     """ Setup commands and and return a dictionary compatible
         with jupyter-server-proxy.
     """
-    from pathlib import Path
-    from tempfile import gettempdir, mkstemp, mkdtemp
+    from tempfile import mkstemp
     from random import choice
     from string import ascii_letters, digits
 
