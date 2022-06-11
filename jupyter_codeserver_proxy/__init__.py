@@ -38,8 +38,6 @@ def _codeserver_urlparams():
     url_params = '?' + '&'.join([
         'username=' + getuser(),
         'password=' + _codeserver_passwd,
-        'encryption=AES',
-        'key=' + _codeserver_aeskey,
         'sharing=true',
     ])
 
