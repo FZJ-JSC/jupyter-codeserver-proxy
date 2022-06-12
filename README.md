@@ -4,10 +4,10 @@
 Integrate [code-server](https://github.com/coder/code-server) in your Jupyter environment for an fast, feature-rich and easy to use remote desktop in the browser.
 
 **ATTENTION:**  
-`code-server` has no official support for passing the password/token via url-parameters. Sad thing, a pull request was not merged [more](https://github.com/coder/code-server/pull/2428).
-Hence, we need to disable authentication at the moment completly with `--auth=none` [more](https://github.com/FZJ-JSC/jupyter-codeserver-proxy/blob/main/jupyter_codeserver_proxy/__init__.py#L93).
+`code-server` has no official support for passing the password/token via url-parameters. Sad thing, a pull request was not merged [[more]](https://github.com/coder/code-server/pull/2428).
+Hence, we need to disable authentication at the moment completly with `--auth=none` [[more]](https://github.com/FZJ-JSC/jupyter-codeserver-proxy/blob/main/jupyter_codeserver_proxy/__init__.py#L93).
 This allows any user who can access localhost:port of the machine running the `code-server` to use it - even if he is not authorized to do so. 
-An alternative solution to close this security hole might be to use unix sockets instead of ports. As soon as this is fully supported by `jupyter-server-proxy` we will switch [more](https://github.com/jupyterhub/jupyter-server-proxy/pull/337)
+An alternative solution to close this security hole might be to use unix sockets instead of ports. As soon as this is fully supported by `jupyter-server-proxy` we will switch [[more]](https://github.com/jupyterhub/jupyter-server-proxy/pull/337).
 
 ## Requirements
 - Python 3.6+
