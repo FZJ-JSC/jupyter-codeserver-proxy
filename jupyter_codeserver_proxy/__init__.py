@@ -88,9 +88,10 @@ def setup_codeserver():
     # create command
     cmd = [
         get_codeserver_executable('code-server'),
-        '--auth=none',
+        '--auth none',  # password
         '--disable-telemetry',
-        '--bind-addr=127.0.0.1:{port}'
+        '--disable-update-check',
+        '--bind-addr 127.0.0.1:{port}'
     ]
     logger.info('Code-Server command: ' + ' '.join(cmd))
 

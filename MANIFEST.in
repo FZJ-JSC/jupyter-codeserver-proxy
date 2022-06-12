@@ -1,1 +1,2 @@
+graft jupyter_codeserver_proxy/bin
 graft jupyter_codeserver_proxy/icons
