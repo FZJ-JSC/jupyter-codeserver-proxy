@@ -10,24 +10,26 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 def get_codeserver_executable(prog):
     from shutil import which
 
-    # Find prog in known locations
-    other_paths = [
-        os.path.join('/opt/codeserver/bin', prog),
-    ]
+    # check the special environment variable
+    if os.getenv("CODESERVER_BIN") is not None:
+        return os.getenv("CODESERVER_BIN")
 
+    # check the bin directory of this package
     wp = os.path.join(HERE, 'bin', prog)
     if os.path.exists(wp):
         return wp
 
+    # check the system path
     if which(prog):
         return prog
 
+    # check at known locations
+    other_paths = [
+        os.path.join('/opt/codeserver/bin', prog),
+    ]
     for op in other_paths:
         if os.path.exists(op):
             return op
-
-    if os.getenv("CODESERVER_BIN") is not None:
-        return os.getenv("CODESERVER_BIN")
 
     raise FileNotFoundError(f'Could not find {prog} in PATH')
 

@@ -9,7 +9,13 @@ Integrate [code-server](https://github.com/coder/code-server) in your Jupyter en
 - JupyterLab >= 3.x
 - jupyter-server-proxy >= 3.1.0
 
-This package executes the `code-server` command. This command assumes the `code-server` command is available in the environment's $PATH.
+This package executes the `code-server` command.  
+It tries to find the `code-server` executable checking the following:  
+- 1. environment variable $CODESERVER_BIN
+- 2. `<dir-of-__init__.py>/bin/code-server`
+- 3. `which code-server` (searching standard $PATH)
+- 4. special locations:
+     - `/opt/codeserver/bin/code-server`
 
 ## Install 
 
