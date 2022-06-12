@@ -88,13 +88,13 @@ def setup_codeserver():
     # create command
     cmd = [
         get_codeserver_executable('code-server'),
-        '--auth none',  # password
+        '--auth=none',  # password
         '--disable-telemetry',
         '--disable-update-check',
-        '--bind-addr 0.0.0.0:{port}',
-        # '--user-data-dir <path>',  # default: ~/.local/share/code-server
-        # '--config <path>',  # ~/.config/code-server/config.yaml
-        # '--extensions-dir <path>',
+        '--bind-addr=0.0.0.0:{port}',
+        # '--user-data-dir=<path>',  # default: ~/.local/share/code-server
+        # '--config=<path>',  # default: ~/.config/code-server/config.yaml
+        # '--extensions-dir=<path>',  # default: .local/share/code-server/extensions
         '--verbose',
     ]
     logger.info('Code-Server command: ' + ' '.join(cmd))
