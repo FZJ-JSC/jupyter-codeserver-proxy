@@ -93,7 +93,8 @@ def setup_codeserver():
         '--auth=none',  # password
         '--disable-telemetry',
         '--disable-update-check',
-        '--bind-addr=0.0.0.0:{port}',
+        '--socket={port}',
+        #'--bind-addr=0.0.0.0:{port}',
         # '--user-data-dir=<path>',  # default: ~/.local/share/code-server
         # '--config=<path>',  # default: ~/.config/code-server/config.yaml
         # '--extensions-dir=<path>',  # default: .local/share/code-server/extensions
@@ -104,6 +105,7 @@ def setup_codeserver():
     return {
         'environment': {},
         'command': cmd,
+        'unix': True,
         # 'mappath': _codeserver_mappath,
         'absolute_url': False,
         'timeout': 90,
