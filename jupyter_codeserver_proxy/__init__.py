@@ -83,7 +83,7 @@ def setup_codeserver():
         raise FileNotFoundError("Passwd generation in temp file FAILED")
 
     # launchers url file including url parameters
-    path_info = 'codeserver/index.html' + _codeserver_urlparams()
+    # path_info = 'codeserver/index.html' + _codeserver_urlparams()
 
     # create command
     cmd = [
@@ -102,7 +102,7 @@ def setup_codeserver():
     return {
         'environment': {},
         'command': cmd,
-        'mappath': _codeserver_mappath,
+        # 'mappath': _codeserver_mappath,
         'absolute_url': False,
         'timeout': 90,
         'new_browser_tab': True,
@@ -110,6 +110,6 @@ def setup_codeserver():
             'enabled': True,
             'icon_path': os.path.join(HERE, 'icons/code-server-logo.svg'),
             'title': 'Code-Server',
-            'path_info': path_info,
+            # 'path_info': path_info,
         },
     }
