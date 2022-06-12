@@ -111,7 +111,7 @@ def setup_codeserver():
         'launcher_entry': {
             'enabled': True,
             'icon_path': os.path.join(HERE, 'icons/code-server-logo.svg'),
-            'title': 'Code-Server',
+            'title': 'VS Code (code-server)',
             # 'path_info': path_info,
         },
     }
