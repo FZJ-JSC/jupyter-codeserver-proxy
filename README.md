@@ -3,6 +3,8 @@
 # jupyter-codeserver-proxy
 Integrate [code-server](https://github.com/coder/code-server) in your Jupyter environment for an fast, feature-rich and easy to use remote desktop in the browser.
 
+![Jupyter-codeserver-proxy example](docs/screenshot.png 'Jupyter-codeserver-proxy example')
+
 **ATTENTION:**  
 `code-server` has no official support for passing the password/token via url-parameters. Sad thing, a pull request was not merged [[more]](https://github.com/coder/code-server/pull/2428).
 Hence, we need to disable authentication at the moment completly with `--auth=none` [[more]](https://github.com/FZJ-JSC/jupyter-codeserver-proxy/blob/main/jupyter_codeserver_proxy/__init__.py#L93).
